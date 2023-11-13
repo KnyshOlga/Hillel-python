@@ -1,15 +1,11 @@
-a = int(input("Please enter number: "))
+a = int(input("Please enter number:"))
 
-first_digit = a // 1000
-the_second_number = a // 100 % 10
-third_digit = a //10 % 10
-the_fourth_digit = a % 10
+b = 0
 
-print(first_digit)
-print(the_second_number)
-print(third_digit)
-print(the_fourth_digit)
+while a > 0:
+   z = a % 10
+   a //= 10
+   b *= 10
+   b += z
 
-
-
-
+print(b)

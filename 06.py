@@ -1,5 +1,11 @@
-my_list = [12, 4, -2, 36, 0, 1, 22]
-last_element = my_list.pop(6)  # Видаляємо останній елемент зі списку
-my_list.insert(0, last_element)  # Додаємо його на початок
-print(my_list)
+list = [12, 3, 4, 10, -2, 8]
+
+if len(list) == 0:
+    print(list)
+elif len(list) < 1:
+    print(list)
+else:
+    list.insert(0, list[-1])
+    list.pop(-1)
+    print(list)
 

@@ -1,11 +1,16 @@
-a = int(input("Please enter number:"))
+first_number = int(input("Введіть перше число: "))
+operator = input("Введіть оператор (+, -, *, /): ")
+second_number = int(input("Введіть друге число: "))
 
-b = 0
-
-while a > 0:
-   z = a % 10
-   a //= 10
-   b *= 10
-   b += z
-
-print(b)
+if operator == '+':
+    result = first_number + second_number
+elif operator == '-':
+    result = first_number - second_number
+elif operator == '*':
+    result = first_number * second_number
+elif operator == '/':
+    if second_number != 0:
+        result = first_number / second_number
+    else:
+        result = "Помилка! Ділення на нуль неможливе."
+print(result)

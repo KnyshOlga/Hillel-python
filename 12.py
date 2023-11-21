@@ -9,8 +9,8 @@ for i in my_string:
     if i in accept_symb:
         new_string += i
 
-if len(new_string) > 139:
-    new_string = new_string[:139]
+if len(new_string) > 140:
+    new_string = new_string[:140]
 
 print(new_string)
 print(len(new_string))

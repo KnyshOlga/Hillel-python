@@ -12,7 +12,7 @@
 # common_elements = common_elements()
 # print(common_elements)
 
-#
+
 # 3. Базові операції над множинами. Перелік
 # Мова Python підтримує наступні операції над множинами:
 #
@@ -41,3 +41,4 @@ def common_elements():
 common_elements = common_elements()
 print(common_elements)
 
+#Вибачте не можу втриматися, щоб не перевірити код наглядно

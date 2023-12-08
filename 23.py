@@ -12,4 +12,5 @@ def some_gen(begin, end, func):
     assert isgenerator(gen) == True, 'Test1'
     assert list(gen) == [2, 4, 16, 256], 'Test2'
 
+
 print('OK')

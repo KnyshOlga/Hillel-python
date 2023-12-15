@@ -9,7 +9,6 @@ class Item:
     def __str__(self):
         return f"{self.name}, price: {self.price}"
 
-
 lemon = Item('lemon', 5, "yellow", "small")
 apple = Item('apple', 2, "red", "middle")
 
@@ -28,7 +27,7 @@ class User:
         return f"{self.name} {self.surname}"
 
 
-buyer = User("Ivan", "Ivanov", "02628162")
+buyer = User("Olha", "Knysh", "02628162")
 
 print(buyer)
 

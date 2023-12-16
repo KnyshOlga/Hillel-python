@@ -1,4 +1,3 @@
-
 class Item:
 
     def __init__(self, name, price, description, dimensions):
@@ -16,6 +15,8 @@ apple = Item('apple', 2, "red", "middle")
 
 print(lemon)
 print(apple)
+
+
 class User:
 
     def __init__(self, name, surname, numberphone):
@@ -30,6 +31,8 @@ class User:
 buyer = User("Ivan", "Ivanov", "02628162")
 
 print(buyer)
+
+
 class Purchase:
     def __init__(self, user):
         self.products = {}
@@ -43,8 +46,7 @@ class Purchase:
         return f"User: {self.user} \nItems: \n{', '.join([f'{product.name}: {cnt} pcs.' for product, cnt in self.products.items()])}"
 
     def get_total(self):
-        for product, cnt in self.products.items():
-            self.total += product.price * cnt
+        self.total = sum(product.price * cnt for product, cnt in self.products.items())
         return self.total
 
 
@@ -54,50 +56,10 @@ cart.add_item(apple, 20)
 
 print(cart)
 
-# assert isinstance(cart.user, User) is True, 'Екземпляр класу User'
-# assert cart.get_total() == 60, "Всього 60"
-# assert cart.get_total() == 60, 'Повинно залишатися 60!'
-# cart.add_item(apple, 10)
-# print(cart)
+assert isinstance(cart.user, User) is True, 'Екземпляр класу User'
+assert cart.get_total() == 60, "Всього 60"
 
-# assert cart.get_total() == 40
+cart.add_item(apple, 10)
+print(cart)
 
-
-# assert isinstance(cart.user, User) is True, 'Екземпляр класу User'
-# assert cart.get_total() == 60, "Всього 60"
-# assert cart.get_total() == 60, 'Повинно залишатися 60!'
-# cart.add_item(apple, 10)
-# assert cart.get_total() == 40
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+assert cart.get_total() == 40
